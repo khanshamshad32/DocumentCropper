@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CropViewController">
+            <connections>
+                <outlet property="croppedImageView" destination="Nbi-Cc-15o" id="Egg-yM-QCg"/>
+                <outlet property="croppedView" destination="tud-F0-MrJ" id="F4j-DA-I1y"/>
+                <outlet property="sourceImageView" destination="2xF-6i-dEM" id="XEa-Dx-fuE"/>
+                <outlet property="view" destination="Fp7-6d-vIN" id="Vsq-Pi-9Ru"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Fp7-6d-vIN">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xF-6i-dEM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fih-ai-KP8">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tN-Q2-U0r">
+                            <rect key="frame" x="337" y="10" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Lg6-n6-erE"/>
+                                <constraint firstAttribute="width" constant="30" id="MWE-lq-ZLk"/>
+                            </constraints>
+                            <state key="normal" image="ic_crop.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cropClicked:" destination="-1" eventType="touchUpInside" id="gKf-Ta-Lmo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRR-d9-OSB">
+                            <rect key="frame" x="8" y="10" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="9fz-A2-nFV"/>
+                                <constraint firstAttribute="width" constant="30" id="Xuz-pf-93w"/>
+                            </constraints>
+                            <state key="normal" image="ic_back.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backClicked:" destination="-1" eventType="touchUpInside" id="KAC-SH-w58"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="1tN-Q2-U0r" firstAttribute="centerY" secondItem="Fih-ai-KP8" secondAttribute="centerY" id="0vS-NQ-07o"/>
+                        <constraint firstItem="gRR-d9-OSB" firstAttribute="leading" secondItem="Fih-ai-KP8" secondAttribute="leading" constant="8" id="2bL-4F-OHL"/>
+                        <constraint firstItem="gRR-d9-OSB" firstAttribute="centerY" secondItem="Fih-ai-KP8" secondAttribute="centerY" id="etQ-eb-pGL"/>
+                        <constraint firstAttribute="trailing" secondItem="1tN-Q2-U0r" secondAttribute="trailing" constant="8" id="jaz-f0-zzD"/>
+                        <constraint firstAttribute="height" constant="50" id="yVk-UC-gEN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Fih-ai-KP8" firstAttribute="leading" secondItem="Fp7-6d-vIN" secondAttribute="leading" id="10l-eX-r1C"/>
+                <constraint firstItem="Fih-ai-KP8" firstAttribute="top" secondItem="2xF-6i-dEM" secondAttribute="bottom" id="1yX-Zz-Ui7"/>
+                <constraint firstAttribute="bottom" secondItem="Fih-ai-KP8" secondAttribute="bottom" id="XbN-9D-NU6"/>
+                <constraint firstItem="2xF-6i-dEM" firstAttribute="top" secondItem="Fp7-6d-vIN" secondAttribute="top" id="epB-of-6GM"/>
+                <constraint firstItem="2xF-6i-dEM" firstAttribute="leading" secondItem="Fp7-6d-vIN" secondAttribute="leading" id="m1x-Vd-KBe"/>
+                <constraint firstAttribute="trailing" secondItem="2xF-6i-dEM" secondAttribute="trailing" id="odU-qn-O2a"/>
+                <constraint firstAttribute="trailing" secondItem="Fih-ai-KP8" secondAttribute="trailing" id="ryJ-L0-KVY"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="tud-F0-MrJ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nbi-Cc-15o">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-hb-UJY">
+                    <rect key="frame" x="315" y="617" width="40" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Wnh-jq-YRD"/>
+                        <constraint firstAttribute="height" constant="35" id="sMj-Rb-I32"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="ic_tick_white.png"/>
+                    <state key="highlighted" image="ic_tick_white.png"/>
+                    <connections>
+                        <action selector="cropCompleteClicked:" destination="-1" eventType="touchUpInside" id="vCN-du-d6t"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQl-Lj-Q5T">
+                    <rect key="frame" x="20" y="617" width="40" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="3Ot-BS-jkT"/>
+                        <constraint firstAttribute="height" constant="35" id="PC3-3Y-bl8"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="white-x-cross-hi.png"/>
+                    <state key="highlighted" image="white-x-cross-hi.png"/>
+                    <connections>
+                        <action selector="cropBackClick:" destination="-1" eventType="touchUpInside" id="3Xg-fG-avF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nbi-Cc-15o" firstAttribute="leading" secondItem="tud-F0-MrJ" secondAttribute="leading" id="4nH-NI-IVy"/>
+                <constraint firstAttribute="trailing" secondItem="fyH-hb-UJY" secondAttribute="trailing" constant="20" id="6nm-74-d7T"/>
+                <constraint firstAttribute="trailing" secondItem="Nbi-Cc-15o" secondAttribute="trailing" id="7fz-ce-f4N"/>
+                <constraint firstItem="Nbi-Cc-15o" firstAttribute="top" secondItem="tud-F0-MrJ" secondAttribute="top" id="BkV-nv-oRT"/>
+                <constraint firstAttribute="bottom" secondItem="zQl-Lj-Q5T" secondAttribute="bottom" constant="15" id="IC9-I6-vUq"/>
+                <constraint firstItem="zQl-Lj-Q5T" firstAttribute="leading" secondItem="tud-F0-MrJ" secondAttribute="leading" constant="20" id="YsD-Yd-8ac"/>
+                <constraint firstAttribute="bottom" secondItem="fyH-hb-UJY" secondAttribute="bottom" constant="15" id="beV-o0-92W"/>
+                <constraint firstAttribute="bottom" secondItem="Nbi-Cc-15o" secondAttribute="bottom" id="ckz-rG-xr3"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back.png" width="200" height="200"/>
+        <image name="ic_crop.png" width="256" height="256"/>
+        <image name="ic_tick_white.png" width="600" height="587"/>
+        <image name="white-x-cross-hi.png" width="444" height="599"/>
+    </resources>
+</document>
